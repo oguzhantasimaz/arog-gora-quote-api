@@ -12,7 +12,7 @@ import (
 func main() {
 	host, ok := os.LookupEnv("HOST")
 	if !ok {
-		host = "localhost"
+		host = "0.0.0.0"
 	}
 	port, ok := os.LookupEnv("PORT")
 	if !ok {
