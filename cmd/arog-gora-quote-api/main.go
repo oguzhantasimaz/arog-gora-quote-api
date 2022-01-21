@@ -6,7 +6,7 @@ import (
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/logger"
-	"github.com/oguzhantasimaz/arog-gora-quote-api/pkg"
+	"github.com/oguzhantasimaz/arog-gora-quote-api/pkg/handlers"
 )
 
 func main() {
@@ -25,7 +25,7 @@ func main() {
 
 	app.Use(logger.New())
 
-	app.Get("/", pkg.Get)
+	app.Get("/", handlers.Get)
 
 	app.Listen(listenAddress)
 }
